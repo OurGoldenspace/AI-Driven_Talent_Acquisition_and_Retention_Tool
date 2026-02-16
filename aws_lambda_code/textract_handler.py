@@ -16,7 +16,7 @@ def lambda_handler(event, context):
         
         print(f"File uploaded: {object_key} in bucket: {bucket_name}")
         
-        # Ensure the file is a PDF
+        # Ensure the file is PDF
         if object_key.lower().endswith('.pdf'):
             # Call Textract to process the PDF file
             response = textract_client.start_document_text_detection(

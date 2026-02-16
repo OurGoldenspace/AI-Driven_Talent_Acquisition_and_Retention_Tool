@@ -73,7 +73,7 @@ def lambda_handler(event, context):
         return {
             'statusCode': 200,
             'headers': {
-                'Access-Control-Allow-Origin': '*',  # Adjust '*' to specific domains in production
+                'Access-Control-Allow-Origin': '*',  # Adjust '*' to specific domains in production.
                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                 'Access-Control-Allow-Headers': 'Content-Type'
             },

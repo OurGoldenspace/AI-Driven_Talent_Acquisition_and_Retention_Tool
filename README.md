@@ -8,4 +8,3 @@ This AI-powered web application revolutionizes talent management by analyzing ca
 ## Use case persona
 Jake Johnson, a seasoned HR and Manager, seeking to modernize his team's approach to talent acquisition and retention in the rapidly evolving software development sector.
 
-Thank you for your contribution @ Pegasus0501

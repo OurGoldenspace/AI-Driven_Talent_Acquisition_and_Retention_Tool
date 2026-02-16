@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +15,28 @@
             width: 100%;
             margin-bottom: 20px;
         }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
+
         .card {
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .recommendations-list {
             white-space: pre-line;
             line-height: 1.8;
             padding: 15px;
         }
+
         .button-container {
             display: flex;
             justify-content: center;
             margin-top: 20px;
         }
+
         .btn-predict {
             background-color: #1a73e8;
             color: white;
@@ -41,77 +47,91 @@
         }
 
         .container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      font-size: 2rem;
-      color: #333;
-    }
-    h3 {
-      font-size: 1.25rem;
-      color: #555;
-    }
-    .step {
-      margin: 20px 0;
-    }
-    input[type="file"], textarea {
-      padding: 10px;
-      font-size: 1rem;
-      margin-top: 10px;
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-    }
-    textarea {
-      height: 100px;
-    }
-    button {
-      background: #4CAF50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #45a049;
-    }
-    button:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-    }
-    #resumestatus {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #555;
-      font-weight: bold;
-    }
-    #resumeresults {
-      margin-top: 20px;
-    }
-    #resumeresults h3 {
-      color: #007BFF;
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-    #resumeresults p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 15px;
-      white-space: pre-wrap;
-    }
+            max-width: 700px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #555;
+        }
+
+        .step {
+            margin: 20px 0;
+        }
+
+        input[type="file"],
+        textarea {
+            padding: 10px;
+            font-size: 1rem;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        #resumestatus {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #555;
+            font-weight: bold;
+        }
+
+        #resumeresults {
+            margin-top: 20px;
+        }
+
+        #resumeresults h3 {
+            color: #007BFF;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        #resumeresults p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+            white-space: pre-wrap;
+        }
     </style>
 </head>
+
 <body class="bg-light">
     <div class="container py-4">
         <!-- Header Section with Logout Button -->
@@ -125,26 +145,26 @@
         <div class="container">
             <h1>Resume Analyzer</h1>
             <div class="step">
-              <h3>Step 1: Upload Resume</h3>
-              <input type="file" id="resumeInput" />
+                <h3>Step 1: Upload Resume</h3>
+                <input type="file" id="resumeInput" />
             </div>
             <div class="step">
-              <h3>Step 2: Edit Job Description</h3>
-              <textarea id="jobDescription" placeholder="Write the job description here..."></textarea>
+                <h3>Step 2: Edit Job Description</h3>
+                <textarea id="jobDescription" placeholder="Write the job description here..."></textarea>
             </div>
             <div class="step">
-              <button id="uploadButton">Upload Resume</button>
+                <button id="uploadButton">Upload Resume</button>
             </div>
             <div class="step">
-              <h3>Step 3: View Results</h3>
-              <button id="viewResultsButton" disabled>View Results</button>
+                <h3>Step 3: View Results</h3>
+                <button id="viewResultsButton" disabled>View Results</button>
             </div>
             <div id="resumestatus"></div>
             <div id="resumeresults"></div>
             <div class="button-container">
                 <button id="resetResumeButton" class="btn btn-secondary">Reset Resume Analysis</button>
             </div>
-          </div>
+        </div>
         <!-- New Survey Card -->
         <div class="card mb-4">
             <div class="card-header bg-info text-white">
@@ -154,7 +174,8 @@
                 <form id="sendSurveyForm">
                     <div class="form-group">
                         <label>Employee Email:</label>
-                        <input type="email" id="employeeEmail" class="form-control" placeholder="Enter employee's email" required>
+                        <input type="email" id="employeeEmail" class="form-control" placeholder="Enter employee's email"
+                            required>
                     </div>
                     <button type="submit" class="btn btn-primary mt-3">Send Survey</button>
                 </form>
@@ -172,13 +193,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Satisfaction Level (0-1):</label>
-                                <input type="number" class="form-control" name="satisfaction_level" 
-                                       step="0.01" min="0" max="1" required>
+                                <input type="number" class="form-control" name="satisfaction_level" step="0.01" min="0"
+                                    max="1" required>
                             </div>
                             <div class="form-group">
                                 <label>Last Evaluation (0-1):</label>
-                                <input type="number" class="form-control" name="last_evaluation" 
-                                       step="0.01" min="0" max="1" required>
+                                <input type="number" class="form-control" name="last_evaluation" step="0.01" min="0"
+                                    max="1" required>
                             </div>
                             <div class="form-group">
                                 <label>Number of Projects:</label>
@@ -281,12 +302,12 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
+    <script>
         document.getElementById('predictionForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData);
-            
+
             try {
                 const response = await fetch('/predict', {
                     method: 'POST',
@@ -295,28 +316,28 @@
                     },
                     body: JSON.stringify(data),
                 });
-                
+
                 const result = await response.json();
-                
+
                 if (result.error) {
                     throw new Error(result.error);
                 }
-                
-                document.getElementById('predictionResult').textContent = 
+
+                document.getElementById('predictionResult').textContent =
                     `Prediction: ${result.prediction === 1 ? 'Likely to leave' : 'Likely to stay'}`;
-                document.getElementById('probabilityResult').textContent = 
+                document.getElementById('probabilityResult').textContent =
                     `Probability of leaving: ${(result.probability * 100).toFixed(2)}%`;
-                
+
                 const recommendations = result.recommendations.split(/\d+\./).filter(Boolean);
                 const formattedRecommendations = recommendations
                     .map((rec, index) => `${index + 1}. ${rec.trim()}`)
                     .join('\n\n');
                 document.getElementById('recommendations').textContent = formattedRecommendations;
-                
+
                 createCharts(data);
                 document.getElementById('results').style.display = 'block';
                 document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
-                
+
             } catch (error) {
                 alert('Error making prediction: ' + error.message);
             }
@@ -382,183 +403,183 @@
                 );
             });
         }
-</script>
-<script>
-    // Send Survey Script
-    document.getElementById('sendSurveyForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('employeeEmail').value.trim();
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    </script>
+    <script>
+        // Send Survey Script
+        document.getElementById('sendSurveyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('employeeEmail').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Validate email
-        if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        const sendButton = document.querySelector('#sendSurveyForm button[type="submit"]');
-        sendButton.disabled = true;
-
-        try {
-            const response = await fetch('/send-survey', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
+            // Validate email
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
             }
 
-            const result = await response.json();
-            if (result.error) {
-                alert('Error sending survey: ' + result.error);
-            } else {
-                alert('Survey sent successfully!');
+            const sendButton = document.querySelector('#sendSurveyForm button[type="submit"]');
+            sendButton.disabled = true;
+
+            try {
+                const response = await fetch('/send-survey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                if (result.error) {
+                    alert('Error sending survey: ' + result.error);
+                } else {
+                    alert('Survey sent successfully!');
+                }
+            } catch (error) {
+                alert('Error sending survey: ' + error.message);
+            } finally {
+                sendButton.disabled = false; // Re-enable button after request
             }
-        } catch (error) {
-            alert('Error sending survey: ' + error.message);
-        } finally {
-            sendButton.disabled = false; // Re-enable button after request
-        }
-    });
-</script>
-<script>
-    // Constants for API endpoints
-const RESUME_HANDLER_API_URL = "https://wf0dpn6qoe.execute-api.us-east-1.amazonaws.com/dev/upload";
-const S3_RESULTS_BASE_URL = "https://resume-analysis-results-bucket.s3.us-east-1.amazonaws.com/responses/";
+        });
+    </script>
+    <script>
+        // Constants for API endpoints
+        const RESUME_HANDLER_API_URL = "https://wf0dpn6qoe.execute-api.us-east-1.amazonaws.com/dev/upload";
+        const S3_RESULTS_BASE_URL = "https://resume-analysis-results-bucket.s3.us-east-1.amazonaws.com/responses/";
 
-const resumeInput = document.getElementById("resumeInput");
-const uploadButton = document.getElementById("uploadButton");
-const viewResultsButton = document.getElementById("viewResultsButton");
-const jobDescriptionTextarea = document.getElementById("jobDescription");
-const statusDiv = document.getElementById("resumestatus");
-const resultsDiv = document.getElementById("resumeresults");
+        const resumeInput = document.getElementById("resumeInput");
+        const uploadButton = document.getElementById("uploadButton");
+        const viewResultsButton = document.getElementById("viewResultsButton");
+        const jobDescriptionTextarea = document.getElementById("jobDescription");
+        const statusDiv = document.getElementById("resumestatus");
+        const resultsDiv = document.getElementById("resumeresults");
 
-let uploadedFileName = "";
+        let uploadedFileName = "";
 
-// Handle file upload
-uploadButton.addEventListener("click", async () => {
-  const file = resumeInput.files[0];
-  const jobDescription = jobDescriptionTextarea.value.trim(); // Get and trim job description
+        // Handle file upload
+        uploadButton.addEventListener("click", async () => {
+            const file = resumeInput.files[0];
+            const jobDescription = jobDescriptionTextarea.value.trim(); // Get and trim job description
 
-  // Ensure a file is selected
-  if (!file) {
-    statusDiv.textContent = "Please select a file first!";
-    return;
-  }
+            // Ensure a file is selected
+            if (!file) {
+                statusDiv.textContent = "Please select a file first!";
+                return;
+            }
 
-  // Ensure job description is provided
-  if (!jobDescription) {
-    statusDiv.textContent = "Please provide a job description before uploading.";
-    return;
-  }
+            // Ensure job description is provided
+            if (!jobDescription) {
+                statusDiv.textContent = "Please provide a job description before uploading.";
+                return;
+            }
 
-  const reader = new FileReader();
-  reader.onload = async () => {
-    const base64Content = reader.result.split(",")[1]; // Extract base64 content
-    const payload = {
-      content: base64Content,
-      file_name: file.name,
-      job_description: jobDescription, // Include job description in the payload
-    };
+            const reader = new FileReader();
+            reader.onload = async () => {
+                const base64Content = reader.result.split(",")[1]; // Extract base64 content
+                const payload = {
+                    content: base64Content,
+                    file_name: file.name,
+                    job_description: jobDescription, // Include job description in the payload
+                };
 
-    try {
-      statusDiv.textContent = "Uploading file...";
-      const response = await fetch(RESUME_HANDLER_API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+                try {
+                    statusDiv.textContent = "Uploading file...";
+                    const response = await fetch(RESUME_HANDLER_API_URL, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(payload),
+                    });
 
-      if (response.ok) {
-        uploadedFileName = file.name; // Store file name for fetching results
-        statusDiv.textContent = "File uploaded successfully!";
-        viewResultsButton.disabled = false; // Enable view results button
-      } else {
-        const error = await response.json();
-        statusDiv.textContent = `Upload failed: ${error.message}`;
-      }
-    } catch (error) {
-      statusDiv.textContent = `Upload failed: ${error.message}`;
-    }
-  };
+                    if (response.ok) {
+                        uploadedFileName = file.name; // Store file name for fetching results
+                        statusDiv.textContent = "File uploaded successfully!";
+                        viewResultsButton.disabled = false; // Enable view results button
+                    } else {
+                        const error = await response.json();
+                        statusDiv.textContent = `Upload failed: ${error.message}`;
+                    }
+                } catch (error) {
+                    statusDiv.textContent = `Upload failed: ${error.message}`;
+                }
+            };
 
-  reader.readAsDataURL(file); // Convert file to base64
-});
+            reader.readAsDataURL(file); // Convert the file to base64
+        });
 
-// Handle view results
-viewResultsButton.addEventListener("click", async () => {
-  if (!uploadedFileName) {
-    statusDiv.textContent = "No file uploaded yet. Please upload a resume first.";
-    return;
-  }
+        // Handle view results
+        viewResultsButton.addEventListener("click", async () => {
+            if (!uploadedFileName) {
+                statusDiv.textContent = "No file uploaded yet. Please upload a resume first.";
+                return;
+            }
 
-  const jobDescription = jobDescriptionTextarea.value; // Get the updated job description
+            const jobDescription = jobDescriptionTextarea.value; // Get the updated job description
 
-  const resultsUrl = `${S3_RESULTS_BASE_URL}${uploadedFileName.replace(".pdf", ".json")}`;
+            const resultsUrl = `${S3_RESULTS_BASE_URL}${uploadedFileName.replace(".pdf", ".json")}`;
 
-  try {
-    statusDiv.textContent = "Fetching results...";
-    const response = await fetch(resultsUrl);
+            try {
+                statusDiv.textContent = "Fetching results...";
+                const response = await fetch(resultsUrl);
 
-    if (response.ok) {
-      const data = await response.json();
+                if (response.ok) {
+                    const data = await response.json();
 
-      // Clear previous results
-      resultsDiv.innerHTML = "";
+                    // Clear previous results
+                    resultsDiv.innerHTML = "";
 
-      // Display the Job Description
-      const jobDescDiv = document.createElement("div");
-      const jobDescHeading = document.createElement("h3");
-      jobDescHeading.textContent = "Job Description";
-      const jobDescContent = document.createElement("p");
-      jobDescContent.textContent = jobDescription;
-      jobDescDiv.appendChild(jobDescHeading);
-      jobDescDiv.appendChild(jobDescContent);
-      resultsDiv.appendChild(jobDescDiv);
+                    // Display the Job Description
+                    const jobDescDiv = document.createElement("div");
+                    const jobDescHeading = document.createElement("h3");
+                    jobDescHeading.textContent = "Job Description";
+                    const jobDescContent = document.createElement("p");
+                    jobDescContent.textContent = jobDescription;
+                    jobDescDiv.appendChild(jobDescHeading);
+                    jobDescDiv.appendChild(jobDescContent);
+                    resultsDiv.appendChild(jobDescDiv);
 
-      // Display the Analysis Results
-      for (const [key, value] of Object.entries(data)) {
-        const section = document.createElement("div");
-        section.style.marginBottom = "20px";
+                    // Display the Analysis Results
+                    for (const [key, value] of Object.entries(data)) {
+                        const section = document.createElement("div");
+                        section.style.marginBottom = "20px";
 
-        // Create a section heading
-        const heading = document.createElement("h3");
-        heading.textContent = key.replace(/_/g, " ").toUpperCase(); // Convert key to a readable format
-        section.appendChild(heading);
+                        // Create a section heading
+                        const heading = document.createElement("h3");
+                        heading.textContent = key.replace(/_/g, " ").toUpperCase(); // Convert key to a readable format
+                        section.appendChild(heading);
 
-        // Create a paragraph for the value
-        const paragraph = document.createElement("p");
-        paragraph.textContent = value;
-        paragraph.style.whiteSpace = "pre-wrap"; // Preserve line breaks
-        section.appendChild(paragraph);
+                        // Create a paragraph for the value
+                        const paragraph = document.createElement("p");
+                        paragraph.textContent = value;
+                        paragraph.style.whiteSpace = "pre-wrap"; // Preserve line breaks
+                        section.appendChild(paragraph);
 
-        resultsDiv.appendChild(section);
-      }
+                        resultsDiv.appendChild(section);
+                    }
 
-      statusDiv.textContent = "Results fetched successfully!";
-    } else {
-      statusDiv.textContent = "Failed to fetch results. Please try again.";
-    }
-  } catch (error) {
-    statusDiv.textContent = `Error fetching results: ${error.message}`;
-  }
-});
+                    statusDiv.textContent = "Results fetched successfully!";
+                } else {
+                    statusDiv.textContent = "Failed to fetch results. Please try again.";
+                }
+            } catch (error) {
+                statusDiv.textContent = `Error fetching results: ${error.message}`;
+            }
+        });
 
-</script>
-<script>
+    </script>
+    <script>
 
-    // Reset the prediction form and results
-    document.getElementById('resetPredictionButton').addEventListener('click', () => {
-        location.reload(); 
-    });
+        // Reset the prediction form and results
+        document.getElementById('resetPredictionButton').addEventListener('click', () => {
+            location.reload();
+        });
 
-    // Reset the resume analysis form and status
-    document.getElementById('resetResumeButton').addEventListener('click', () => {
-        location.reload();
-    });
-</script>
+        // Reset the resume analysis form and status
+        document.getElementById('resetResumeButton').addEventListener('click', () => {
+            location.reload();
+        });
+    </script>
 </body>
-</html>
 
+</html>

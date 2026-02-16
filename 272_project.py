@@ -22,7 +22,7 @@ df = pd.read_csv('/content/HR_comma_sep.csv')  # Adjust the path if needed
 # Display basic information about the dataset
 print(df.info())
 
-# Check for missing values
+# Check for missing any values
 print(df.isnull().sum())
 
 # Display a sample of the data

@@ -97,7 +97,7 @@ def lambda_handler(event, context):
             raw_response = query_bedrock(prompt)
             responses[key] = clean_response(raw_response)
 
-        # Log and return responses
+        # Log and return the responses
         print("Bedrock responses:", responses)
 
         # Save responses to S3

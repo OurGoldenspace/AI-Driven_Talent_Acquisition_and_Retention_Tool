@@ -223,7 +223,7 @@ def predict():
             if col not in input_df.columns:
                 input_df[col] = 0
         
-        # Select only the columns used during training
+        # Select only the columns used during the training
         input_df = input_df[X_columns]
         
         # Scale the features

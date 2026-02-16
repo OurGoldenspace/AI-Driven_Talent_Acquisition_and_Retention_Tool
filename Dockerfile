@@ -16,5 +16,5 @@ RUN pip install scikit-learn==1.5.2 joblib==1.2.0 pyarrow
 # Make port 5001 available to the world outside this container
 EXPOSE 5001
 
-# Define the command to run the app
+# Define the command to run the app.
 CMD ["python", "app.py"]
